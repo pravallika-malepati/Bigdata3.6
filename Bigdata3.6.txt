@@ -1,0 +1,18 @@
+                                       ASSIGNMENT 3.6
+1)Given that 7TB is the available disk space per node(9 disks with 1 TB,2 disk for operating system were excluded.) 
+ Assuming initial data size is 600TB.
+A) The number of data nodes can be found using the formula   
+                                 n=H/D
+                here H=available disk sapce per node   i.e 600TB
+                and  D=disk space available per node
+                       n=number of data nodes 
+            
+               n=600/7=85
+              The number of data nodes n=85 nodes.
+
+2)Imagine that you are uploading a file of 500MB into HDFS.100MB of data is successfully uploaded into HDFS and another client wants to read the uploaded data while the upload is still in progress. What will happen in such a scenario, will the 100 MB of data that is uploaded will it be displayed?
+
+A)Yes.The 100 MB of data that is uploaded is displayed.
+
+  Here we are uploading 500 MB of data.out of 500 MB of data 100 MB is uploaded successfully.It means that we are going to have 5 blocks of data which are replicated 3 times .Among 5 blocks of data 1 block is uploaded succesfully.
+100 MB block which  is uploaded  copied  to other 2 datanodes. Once the block is copied and replicated to the datanodes .During this process first 100 MB block is written into HDFS.
